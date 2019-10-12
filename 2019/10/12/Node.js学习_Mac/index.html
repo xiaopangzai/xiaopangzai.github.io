@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>Node.js学习_Mac | 笑胖仔的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="今天心血来潮，下载了个React-Native项目，运行看看，运行说明里有这么一句：执行 npm install，这个看起来那么熟悉呢，运行完，果然-bash: npm: command not found，搜了搜我的笔记，npm的字样出现在2018年11月12日左右Node.js学习的几篇里头，好吧，十个月前，时间过得有点快，原来上次学习node已经那么久远了。  先把原笔记摘过来吧，顺便再操">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Node.js学习_Mac">
+<meta property="og:url" content="http://yoursite.com/2019/10/12/Node.js学习_Mac/index.html">
+<meta property="og:site_name" content="笑胖仔的博客">
+<meta property="og:description" content="今天心血来潮，下载了个React-Native项目，运行看看，运行说明里有这么一句：执行 npm install，这个看起来那么熟悉呢，运行完，果然-bash: npm: command not found，搜了搜我的笔记，npm的字样出现在2018年11月12日左右Node.js学习的几篇里头，好吧，十个月前，时间过得有点快，原来上次学习node已经那么久远了。  先把原笔记摘过来吧，顺便再操">
+<meta property="og:locale" content="zh">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190926135906475.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Bhbmc3ODc1NTk2MTM=,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190926140417570.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Bhbmc3ODc1NTk2MTM=,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2019092614044423.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Bhbmc3ODc1NTk2MTM=,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190926140539998.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Bhbmc3ODc1NTk2MTM=,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190926140615331.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Bhbmc3ODc1NTk2MTM=,size_16,color_FFFFFF,t_70">
+<meta property="og:updated_time" content="2019-10-12T08:53:18.303Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Node.js学习_Mac">
+<meta name="twitter:description" content="今天心血来潮，下载了个React-Native项目，运行看看，运行说明里有这么一句：执行 npm install，这个看起来那么熟悉呢，运行完，果然-bash: npm: command not found，搜了搜我的笔记，npm的字样出现在2018年11月12日左右Node.js学习的几篇里头，好吧，十个月前，时间过得有点快，原来上次学习node已经那么久远了。  先把原笔记摘过来吧，顺便再操">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20190926135906475.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Bhbmc3ODc1NTk2MTM=,size_16,color_FFFFFF,t_70">
+  
+    <link rel="alternate" href="/atom.xml" title="笑胖仔的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">笑胖仔的博客</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Node.js学习_Mac" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/10/12/Node.js学习_Mac/" class="article-date">
+  <time datetime="2019-10-12T08:53:18.303Z" itemprop="datePublished">2019-10-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Node.js学习_Mac
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>今天心血来潮，下载了个React-Native项目，运行看看，运行说明里有这么一句：执行 npm install，这个看起来那么熟悉呢，运行完，果然-bash: npm: command not found，搜了搜我的笔记，npm的字样出现在2018年11月12日左右Node.js学习的几篇里头，好吧，十个月前，时间过得有点快，原来上次学习node已经那么久远了。</p>
+</blockquote>
+<p>先把原笔记摘过来吧，顺便再操作一遍安装，这么看来我这篇笔记记得还挺认真，我记得其它的都基本是堆积叠加，这个竟还有样式呢，哈哈哈哈。</p>
+<p>通过后面截图看，当时应该是跟着菜鸟教程学习的，我记不得了，后面夹杂着其它的链接，应该也是理解不清的内容又搜索了其它的🤔，嗯，学无止境，皆为我师，没有局限性哒。。。<br><img src="https://img-blog.csdnimg.cn/20190926135906475.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Bhbmc3ODc1NTk2MTM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>不过粘贴过来就没有样式了，重新排下版：</p>
+</blockquote>
+<h2 id="1、安装："><a href="#1、安装：" class="headerlink" title="1、安装："></a>1、安装：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install node</span><br></pre></td></tr></table></figure>
+
+<h2 id="2、在-Cloud-Studio-中运行-node-js-程序"><a href="#2、在-Cloud-Studio-中运行-node-js-程序" class="headerlink" title="2、在 Cloud Studio 中运行 node.js 程序"></a>2、在 Cloud Studio 中运行 node.js 程序</h2><p><a href="https://studio.dev.tencent.com/" target="_blank" rel="noopener">https://studio.dev.tencent.com/</a></p>
+<p>1）、新建工作空间（随意）：</p>
+<p><img src="https://img-blog.csdnimg.cn/20190926140417570.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Bhbmc3ODc1NTk2MTM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>2）、右侧添加工作环境；</p>
+<p>3）、左侧新建Node文件夹、hello.js文件；</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">/*代码示例*/</span><br><span class="line"></span><br><span class="line">var http = require(&apos;http&apos;);</span><br><span class="line"></span><br><span class="line">http.createServer(function (request, response) &#123;</span><br><span class="line"></span><br><span class="line">// 发送 HTTP 头部</span><br><span class="line">// HTTP 状态值: 200 : OK</span><br><span class="line">// 内容类型: text/plain</span><br><span class="line">response.writeHead(200, &#123;&apos;Content-Type&apos;:&apos;text/plain&apos;&#125;);</span><br><span class="line"></span><br><span class="line">// 发送响应数据 &quot;Hello World&quot;</span><br><span class="line">response.end(&quot;Hello, Universe! I&apos;m running on Cloud Studio!\n&quot;);</span><br><span class="line">&#125;).listen(8888);</span><br><span class="line"></span><br><span class="line">// 终端打印如下信息</span><br><span class="line">console.log(&apos;Server running at http://127.0.0.1:8888/&apos;);</span><br></pre></td></tr></table></figure>
+
+<p>4）、终端输入：cd Node，打开该文件夹，输入：node hello.js，运行文件；</p>
+<p><img src="https://img-blog.csdnimg.cn/2019092614044423.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Bhbmc3ODc1NTk2MTM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>5）、右侧“访问链接”，输入8888，创建连接；</p>
+<p><img src="https://img-blog.csdnimg.cn/20190926140539998.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Bhbmc3ODc1NTk2MTM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><a href="http://www.runoob.com/nodejs/nodejs-http-server.html" target="_blank" rel="noopener">http://www.runoob.com/nodejs/nodejs-http-server.html</a><br><img src="https://img-blog.csdnimg.cn/20190926140615331.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Bhbmc3ODc1NTk2MTM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="3、代码规范；"><a href="#3、代码规范；" class="headerlink" title="3、代码规范；"></a>3、代码规范；</h2><p><a href="https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/001434501436552e03ec6cc152b4c84959f14d0ea278488000" target="_blank" rel="noopener">https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/001434501436552e03ec6cc152b4c84959f14d0ea278488000</a><br>第一行总是写上<code>&#39;use strict&#39;</code>;是因为我们总是以严格模式运行JavaScript代码，避免各种潜在陷阱。</p>
+<p>4、打开node环境，并运行；</p>
+<p>在命令行模式下，可以执行node进入Node交互式环境，也可以执行<code>node hello.js</code>运行一个<code>.js</code>文件。</p>
+<p>在Node交互式环境下，我们可以输入JavaScript代码并立刻执行。<br>此外，在命令行模式运行<code>.js</code>文件和在Node交互式环境下直接运行JavaScript代码有所不同。Node交互式环境会把每一行JavaScript代码的结果自动打印出来，但是，直接运行JavaScript文件却不会。<br>例如，在Node交互式环境下，输入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; 100 + 200 + 300;</span><br><span class="line">600</span><br></pre></td></tr></table></figure>
+
+<p>直接可以看到结果<code>600</code>。</p>
+<h2 id="5、关闭node环境："><a href="#5、关闭node环境：" class="headerlink" title="5、关闭node环境："></a>5、关闭node环境：</h2><p>终端Terminal中输入<code>Ctrl + c</code>即可</p>
+<h2 id="6、模块："><a href="#6、模块：" class="headerlink" title="6、模块："></a>6、模块：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">test.js：</span><br><span class="line"></span><br><span class="line">&apos;use strict&apos;;</span><br><span class="line">var s = &apos;Hello&apos;;</span><br><span class="line">function greet(name) &#123;</span><br><span class="line">    console.log(s + &apos;,&apos; + name + &apos;!&apos;);</span><br><span class="line">&#125;</span><br><span class="line">module.exports = greet;</span><br><span class="line"></span><br><span class="line">main.js：</span><br><span class="line"></span><br><span class="line">&apos;use strict&apos;;</span><br><span class="line">var greet = require(&apos;./test&apos;);</span><br><span class="line">var s = &apos;Michael&apos;;</span><br><span class="line">greet(s);</span><br></pre></td></tr></table></figure>
+
+<p>运行main.js：<code>node main.js</code><br>运行结果：<code>Hello,Michael!</code></p>
+<h2 id="7、Node-js服务的重启与监控"><a href="#7、Node-js服务的重启与监控" class="headerlink" title="7、Node.js服务的重启与监控"></a>7、Node.js服务的重启与监控</h2><p>  开始：<code>Node +服务文件名</code><br>  停止：直接快捷键<code>Ctrl+C</code><br>  监控：1.安装 npm install supervisor -g, 2.supervisor app.js<br>  参考：<a href="http://blog.csdn.net/mike694439716/article/details/50775971" target="_blank" rel="noopener">http://blog.csdn.net/mike694439716/article/details/50775971</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/10/12/Node.js学习_Mac/" data-id="ck1nbs3zv000aahah0bpiyk11" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/10/12/【踩坑】Mac搭建jira（数据库、命令行一点不通的小白）/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          【踩坑】Mac搭建jira（数据库、命令行一点不通的小白）
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/10/12/Mac终端 运行shell脚本/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Mac终端 运行shell脚本</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/10/12/我还没学会怎么好好生活/">我还没学会怎么好好生活</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/12/【踩坑】Mac搭建jira（数据库、命令行一点不通的小白）/">【踩坑】Mac搭建jira（数据库、命令行一点不通的小白）</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/12/Node.js学习_Mac/">Node.js学习_Mac</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/12/Mac终端 运行shell脚本/">Mac终端 运行shell脚本</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/12/Mac数据库管理工具——MySQL Workbench的安装及使用/">Mac数据库管理工具——MySQL Workbench的安装及使用</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 笑胖仔<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

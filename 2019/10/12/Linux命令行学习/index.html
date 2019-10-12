@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>Linux命令行学习 | 笑胖仔的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="最近在看阿里云服务器搭建的视频，有讲Linux命令行，想起来之前看python视频时候，笔记有记录过，搜了下，好吧，记录时间是2019年3月1日，半年前了，粘贴过来做个记录好了，后续学习过程中继续更新，也方便查看。  ls：list  查看当前文件夹下的内容pwd：print work directory 查看当前文件夹下的内容cd[目录名]：change directory 切换文件夹touc">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux命令行学习">
+<meta property="og:url" content="http://yoursite.com/2019/10/12/Linux命令行学习/index.html">
+<meta property="og:site_name" content="笑胖仔的博客">
+<meta property="og:description" content="最近在看阿里云服务器搭建的视频，有讲Linux命令行，想起来之前看python视频时候，笔记有记录过，搜了下，好吧，记录时间是2019年3月1日，半年前了，粘贴过来做个记录好了，后续学习过程中继续更新，也方便查看。  ls：list  查看当前文件夹下的内容pwd：print work directory 查看当前文件夹下的内容cd[目录名]：change directory 切换文件夹touc">
+<meta property="og:locale" content="zh">
+<meta property="og:updated_time" content="2019-10-12T08:52:29.585Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Linux命令行学习">
+<meta name="twitter:description" content="最近在看阿里云服务器搭建的视频，有讲Linux命令行，想起来之前看python视频时候，笔记有记录过，搜了下，好吧，记录时间是2019年3月1日，半年前了，粘贴过来做个记录好了，后续学习过程中继续更新，也方便查看。  ls：list  查看当前文件夹下的内容pwd：print work directory 查看当前文件夹下的内容cd[目录名]：change directory 切换文件夹touc">
+  
+    <link rel="alternate" href="/atom.xml" title="笑胖仔的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">笑胖仔的博客</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Linux命令行学习" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/10/12/Linux命令行学习/" class="article-date">
+  <time datetime="2019-10-12T08:52:29.585Z" itemprop="datePublished">2019-10-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Linux命令行学习
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>最近在看阿里云服务器搭建的视频，有讲Linux命令行，想起来之前看python视频时候，笔记有记录过，搜了下，好吧，记录时间是2019年3月1日，半年前了，粘贴过来做个记录好了，后续学习过程中继续更新，也方便查看。</p>
+</blockquote>
+<p><code>ls</code>：list  查看当前文件夹下的内容<br><code>pwd</code>：print work directory 查看当前文件夹下的内容<br><code>cd[目录名]</code>：change directory 切换文件夹<br><code>touch[文件名]</code>：如果文件不存在，新建文件<br><code>mkdir[目录名]</code>：make directory 创建目录<br><code>rm[文件名]</code>：remove 删除指定的文件名<br><code>clear</code>：clear 清屏</p>
+<p>创建文件：<code>touch 文件名</code><br>创建文件（目录）：<code>mkdir 文件夹名（目录）</code><br>删除文件：<code>rm 文件名</code><br>删除文件夹（目录）：<code>rm -r 文件夹名（目录）</code></p>
+<p><strong>查阅命令帮助信息：</strong><br>command —help          ：<code>mkdir --help</code><br>man —help    q退出      ：<code>man mkdir</code></p>
+<p><strong>自动补全：</strong><br>文件/目录/命令，按下tab键，如有歧义，再次按tab键</p>
+<p><strong>曾经使用过的命令：</strong><br>上/下光标来回切换曾经使用过的命令<br><code>ctrl+c</code>  退出命令</p>
+<p><strong>隐藏文件：</strong><br> 以.开头的文件为隐藏文件，需要用-a参数才能显示<br><code>ls -a</code> 显示隐藏的文件 .文件</p>
+<p><code>cd .</code> 当前目录<br><code>cd ..</code> 上级目录</p>
+<p><strong>ls常用选项：</strong></p>
+<p><code>ls -l</code>  以列表方式展示文件创建时间、大小等详细信息<br>第一列含义：小写d开头的为目录，其余为文件；</p>
+<p><code>ls -l -h</code>  配合-l以人性化的方式显示文件大小</p>
+<p><code>ls -lh</code> 等同于 ls -l -h<br><code>ls -lha</code> 显示隐藏文件</p>
+<p>字节 B （Byte）<br>千 K （Kibibyte） 1 KB=1024 B，千字节（1024=2**10）<br>兆 M（Mebihyte） 1MB=1024 KB，百万字节<br>千兆 G（Gigabyte） 1 GB=1024 MB，十亿字节，千兆字节<br>太 T（Terabyte）1 TB=1024 GB，万亿字节，太字节<br>拍 P（Petabyte）1 PB=1024 TB，千万字节，拍字节<br>艾 E（Exabyte） 1 EB=1024 PB，百亿字节，艾字节<br>泽 Z（Zettabyte） 1 ZB=1024 EB，十万亿字节，泽字节<br>尧 Y（Yottabyte） 1 YB=1024 ZB，一亿亿字节，尧字节</p>
+<p><strong>ls和通配符的联合使用：</strong></p>
+<p>*任意个数字符<br>？代表一个</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/10/12/Linux命令行学习/" data-id="ck1nbs3zs0008ahah4wiu9qwv" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/10/12/Mac mysql安装与卸载/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Mac mysql安装与卸载
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/10/12/Linux vi_vim基本使用/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Linux vi_vim基本使用</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/10/12/我还没学会怎么好好生活/">我还没学会怎么好好生活</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/12/【踩坑】Mac搭建jira（数据库、命令行一点不通的小白）/">【踩坑】Mac搭建jira（数据库、命令行一点不通的小白）</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/12/Node.js学习_Mac/">Node.js学习_Mac</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/12/Mac终端 运行shell脚本/">Mac终端 运行shell脚本</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/12/Mac数据库管理工具——MySQL Workbench的安装及使用/">Mac数据库管理工具——MySQL Workbench的安装及使用</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 笑胖仔<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
