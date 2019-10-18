@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  
+  <title>GitHub Pages + Hexo免费搭建个人博客_Mac [ 笑胖仔的博客 ]</title>
+  
+    <!-- stylesheets list from config.yml -->
+    
+      <link rel="stylesheet" href="/css/iLiKE.css">
+    
+  
+  
+  
+  <script src="//cdn1.lncld.net/static/js/3.1.1/av-min.js"></script>
+    <script id="leancloud">
+      AV.init({
+          appId: "6E5zTbTljdUbVW2WkXPsXGJk-gzGzoHsz",
+          appKey: "0vsyDKfNpeSECAI70J794ugv"
+      });
+    </script>
+
+</head></html>
+<body>
+    <div class="header">
+        <div class="container">
+    <div class="menu">
+      <div class="menu-left">
+        <a href="/">
+          <img src="/favicon.ico"></img>
+        </a>
+      </div>
+      <div class="menu-right">
+        
+          
+          
+          
+          
+          
+          
+          <a href="/">首页</a>
+        
+          
+          
+          
+          
+          
+          
+          <a href="/Archives">归档</a>
+        
+      </div>
+    </div>
+</div>
+    </div>
+    <div class="container">
+        <h1 class="post-title">GitHub Pages + Hexo免费搭建个人博客_Mac</h1>
+<article class="post markdown-style">
+  <p>拖延症患者总会找各种理由给自己的拖延、慵懒做辅证，以至于一件事情一直不做，还能合理合据，达到心理上的安慰。</p>
+<p>总要做出点儿实际性的行为，尽可能地克制、约束自己。比如，我昨天下单买了两幅耳机🤔🤔🤔，电脑上插的这根只有一边有声音，另一边总能听到外界的声音而不能专心做事情，前提当然是自我提升阶段，如果手上有事情在很投入地做，就算两边耳机里都没声音，也不会察觉到什么。。。所以在无所事事的时候，用耳机堵上自己的耳朵，聚精会神，约束自己学习吧。</p>
+<p>前几天学习了搭建博客<a href="https://xiaopangzai.github.io" target="_blank" rel="noopener">https://xiaopangzai.github.io</a>，说要整理博文来着，一直拖到今天，而上午已经被我白白浪费过去了，强迫自己写博客这个事情，一下让烦躁不安的心沉了下来，那么整理下思路开始了。</p>
+<blockquote>
+<p>一、初识Hexo；<br>二、环境配置；<br>三、如何利用Hexo搭建博客；<br>四、部署至github；<br>五、Hexo主题的使用；<br>六、搭建过程遇到的问题； </p>
+</blockquote>
+<h1 id="一、初识Hexo；"><a href="#一、初识Hexo；" class="headerlink" title="一、初识Hexo；"></a>一、初识Hexo；</h1><p>快速、简洁且高效的博客框架，官网：<a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">https://hexo.io/zh-cn/</a>是这么介绍的，嗯，有道理，那么我就不赘述了，想要更透彻了解的可自行查阅。</p>
+<p>但是要知道它是个博客框架，有很多好看的主题<a href="https://hexo.io/themes/" target="_blank" rel="noopener">https://hexo.io/themes/</a>可以应用在自己的博客上，这篇文章要讲述如何用hexo写博客并部署到github上就好了。</p>
+<h1 id="二、环境配置；"><a href="#二、环境配置；" class="headerlink" title="二、环境配置；"></a>二、环境配置；</h1><p>安装Hexo前需要安装Node.js、Git：</p>
+<p><strong>1、安装Node.js（Hexo是基于Node.js编写的）：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install node</span><br></pre></td></tr></table></figure>
+
+<p>之前写过一篇关于node的博文，可做延伸——&gt;&gt;Node.js学习_Mac：<a href="https://blog.csdn.net/pang787559613/article/details/101431431" target="_blank" rel="noopener">https://blog.csdn.net/pang787559613/article/details/101431431</a></p>
+<p><strong>2、安装Git：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install git</span><br></pre></td></tr></table></figure>
+
+<p><strong>3、安装Hexo：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+<h1 id="三、如何利用Hexo搭建博客；"><a href="#三、如何利用Hexo搭建博客；" class="headerlink" title="三、如何利用Hexo搭建博客；"></a>三、如何利用Hexo搭建博客；</h1><p><strong>1、在桌面新建一个空文件夹blog（因为我之前自己搭建一个名字一样，所以使用blog2演示）；</strong><br><img src="https://img-blog.csdnimg.cn/20191017161755117.png" alt="在这里插入图片描述"></p>
+<p><strong>2、使用Hexo生成博客，初始化一个博客：</strong></p>
+<p>1）、进入blog文件夹：<code>cd Desktop/blog2</code><br>2）、初始化：<code>hexo init</code></p>
+<p><img src="https://img-blog.csdnimg.cn/20191017162611402.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Bhbmc3ODc1NTk2MTM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20191017162621697.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Bhbmc3ODc1NTk2MTM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>3、启动hexo：<code>hexo s</code></strong></p>
+<p>因为我之前搭建过，所以提示4000端口被占用：</p>
+<p><img src="https://img-blog.csdnimg.cn/20191017164253569.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Bhbmc3ODc1NTk2MTM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>解决方法如下：</p>
+<p><code>sudo lsof -i:4000</code>，查看被占用进程的pid</p>
+<p>再输<code>sudo kill -9 pid</code> （pid为上一步相应查看到的）</p>
+<p>然后再继续<code>hexo s</code>，则成功。</p>
+<p><img src="https://img-blog.csdnimg.cn/20191017164520303.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Bhbmc3ODc1NTk2MTM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>浏览器输入：<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a>，可查看到默认生成了一篇博文：<br><img src="https://img-blog.csdnimg.cn/20191017172543434.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Bhbmc3ODc1NTk2MTM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>4、新建一篇博文：</strong></p>
+<p>ctrl+c断开刚刚的链接，新建一篇博文：<code>hexo n &quot;发布第一篇个人博客&quot;</code></p>
+<p><img src="https://img-blog.csdnimg.cn/20191017172943782.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Bhbmc3ODc1NTk2MTM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>5、接下来就是更改博文内容，可以选择用命令行，也可用开发工具，我直接使用WebStrom打开该文件了，找到相应的位置，做修改即可，MarkDown格式右侧可以直接看到样式：</strong><br><img src="https://img-blog.csdnimg.cn/20191017173302558.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Bhbmc3ODc1NTk2MTM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20191017173609279.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Bhbmc3ODc1NTk2MTM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>6、同样在blog2文件下：</strong><br>清理：<code>hexo clean</code><br>生成：<code>hexo g</code><br>启动：<code>hexo s</code></p>
+<p><img src="https://img-blog.csdnimg.cn/20191017174040682.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Bhbmc3ODc1NTk2MTM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>7、刷新页面则看到，内容已经更新上去了：</strong></p>
+<p><img src="https://img-blog.csdnimg.cn/20191017174002431.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Bhbmc3ODc1NTk2MTM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h1 id="四、部署至github；"><a href="#四、部署至github；" class="headerlink" title="四、部署至github；"></a>四、部署至github；</h1><p><strong>1、登录github：<a href="https://github.com" target="_blank" rel="noopener">https://github.com</a>，没账号的新建一个，新创建一个仓库New repository，仓库名必须为：<code>昵称.github.io</code>:</strong>，输入描述，创建：<br><img src="https://img-blog.csdnimg.cn/20191017174507951.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Bhbmc3ODc1NTk2MTM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20191017174955185.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Bhbmc3ODc1NTk2MTM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>因为我已经创建过了，所以有红色叹号，新手不会：<br><img src="https://img-blog.csdnimg.cn/20191017175003539.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Bhbmc3ODc1NTk2MTM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>2、命令行下，ctrl+c，退出命令，仍然在blog2目录下，安装git部署插件：<code>npm install hexo-deployer-git --save</code>，我的安装过了，所以长这样：</strong></p>
+<p>如果看到安装过程有warning，忽略即可。<br><img src="https://img-blog.csdnimg.cn/20191017175518941.png" alt="在这里插入图片描述"></p>
+<p><strong>3、更改blog2文件夹下，_config.yml的配置，我直接用webstorm了，用命令行修改也可以：</strong></p>
+<p>repo为第一步创建的git仓库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/xiaopangzai/xiaopangzai.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/20191017180002623.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Bhbmc3ODc1NTk2MTM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20191017180013833.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Bhbmc3ODc1NTk2MTM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>4、回到命令行部署到远端：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<p>中间会让输入github密码，输入即可，后续部署完成，即可访问你的远端地址：<a href="https://github.com/xiaopangzai/xiaopangzai.github.io.git" target="_blank" rel="noopener">https://github.com/xiaopangzai/xiaopangzai.github.io.git</a><br><img src="https://img-blog.csdnimg.cn/20191017180559342.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Bhbmc3ODc1NTk2MTM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h1 id="五、Hexo主题的使用；"><a href="#五、Hexo主题的使用；" class="headerlink" title="五、Hexo主题的使用；"></a>五、Hexo主题的使用；</h1><p><strong>1、选主题：<a href="https://hexo.io/themes/" target="_blank" rel="noopener">https://hexo.io/themes/</a>，有很多主题可供选择，也可使用网友推荐的自己喜欢的主题，有相应的预览、github地址：</strong></p>
+<p>我这里使用的是：<br>iLiKE：<br><a href="https://github.com/CaiChenghan/iLiKE" target="_blank" rel="noopener">https://github.com/CaiChenghan/iLiKE</a></p>
+<p>有相应的安装方法：</p>
+<p><img src="https://img-blog.csdnimg.cn/2019101718104855.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Bhbmc3ODc1NTk2MTM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>2、命令行输入进行安装：<code>git clone https://github.com/CaiChenghan/iLiKE.git themes/iLiKE</code></strong></p>
+<p>安装好之后，在blog2/themes下，会多出一个iLiKE的文件夹，就是刚刚安装好的主题，接下来继续修改_config.yml配置，theme修改为安装好的iLiKE就可以了：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https://hexo.io/plugins/</span><br><span class="line">## Themes: https://hexo.io/themes/</span><br><span class="line">theme: iLiKE</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/2019101809162740.png" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20191018091638817.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Bhbmc3ODc1NTk2MTM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>3、清理、启动：</strong></p>
+<p>清理：<code>hexo clean</code><br>生成：<code>hexo g</code><br>启动：<code>hexo s</code></p>
+<p><img src="https://img-blog.csdnimg.cn/20191017174040682.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Bhbmc3ODc1NTk2MTM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>在本地刷新预览<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a>之后，看到主题效果，可根据自己需要做相应修改即可。</p>
+<p><strong>4、推至远端：</strong></p>
+<p>ctrl+c退出上一步命令，然后推至远端：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<p>刷新查看：<a href="https://xiaopangzai.github.io" target="_blank" rel="noopener">https://xiaopangzai.github.io</a></p>
+<h1 id="六、搭建过程遇到的问题；"><a href="#六、搭建过程遇到的问题；" class="headerlink" title="六、搭建过程遇到的问题；"></a>六、搭建过程遇到的问题；</h1><p><strong>1、部署到github之后，可能出现打开<a href="https://xiaopangzai.github.io" target="_blank" rel="noopener">https://xiaopangzai.github.io</a>，结果是404：</strong><br><img src="https://img-blog.csdnimg.cn/2019101809273143.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Bhbmc3ODc1NTk2MTM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>解决方法：</strong></p>
+<p>1）、github相应仓库-设置，需设置仓库为public；</p>
+<p>2）、github相应仓库-设置，需选择theme；</p>
+<p><img src="https://img-blog.csdnimg.cn/20191018093538200.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Bhbmc3ODc1NTk2MTM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>如设置为private：</p>
+<p><img src="https://img-blog.csdnimg.cn/20191018093601770.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Bhbmc3ODc1NTk2MTM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>设为public，则可选择主题，此时亦不能访问，需要选择一个主题：</p>
+<p><img src="https://img-blog.csdnimg.cn/20191018093615823.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Bhbmc3ODc1NTk2MTM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>选择一个主题之后，显示已经可以访问了，刷新即可访问<a href="https://xiaopangzai.github.io" target="_blank" rel="noopener">https://xiaopangzai.github.io</a>：</p>
+<p><img src="https://img-blog.csdnimg.cn/20191018093634288.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Bhbmc3ODc1NTk2MTM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>以上就是搭建个人博客的全过程了，也可以购买自己的域名，放置自己的域名下，我没有操作这个，没有话语权，就不再讲述啦，需要的小伙伴可以自行查阅。。。</p>
+<h2 id="结束语："><a href="#结束语：" class="headerlink" title="结束语："></a>结束语：</h2><blockquote>
+<p>这段添个小尾巴，我是：笑胖仔，一个热爱运动的90后程序媛，偶尔懒散，偶尔励志，人生短短几个秋，怎么开心怎么来。以下是我的各平台账号，疏于管理，最近罗列了一下，就当是个记录的地方吧，也激励我坚持不断地去更新吧：</p>
+<blockquote>
+<p>个人博客：<a href="https://xiaopangzai.github.io" target="_blank" rel="noopener">https://xiaopangzai.github.io</a><br>CSDN：<a href="https://blog.csdn.net/pang787559613" target="_blank" rel="noopener">https://blog.csdn.net/pang787559613</a><br>简书：<a href="https://www.jianshu.com/u/1eb3400994f7" target="_blank" rel="noopener">https://www.jianshu.com/u/1eb3400994f7</a><br>知乎：<a href="https://www.zhihu.com/people/xiao-pang-zi-14-4/posts" target="_blank" rel="noopener">https://www.zhihu.com/people/xiao-pang-zi-14-4/posts</a><br>Github:<a href="https://github.com/xiaopangzai" target="_blank" rel="noopener">https://github.com/xiaopangzai</a></p>
+</blockquote>
+</blockquote>
+
+</article>
+
+    <div class="pagenator post-pagenator">
+    
+    
+
+    
+    <p>上次更新 2019-10-18</p>
+    
+    
+        <a class="extend next post-next" href="/2019/10/12/App Store  “我们未能完成您的购买”解决方法/">下一篇</a>
+    
+    </div>
+
+    </div>
+    <div class="footer">
+        <div class="container">
+    <div class="social">
+	<ul class="social-list">
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+				
+				<li>
+					<a href="https://blog.csdn.net/pang787559613" title="csdn" target="_self">
+					<i class="fa fa-csdn"></i>
+					</a>
+				</li>
+			
+		
+			
+				
+				<li>
+					<a href="https://www.jianshu.com/u/1eb3400994f7" title="jianshu" target="_self">
+					<i class="fa fa-jianshu"></i>
+					</a>
+				</li>
+			
+		
+			
+				
+				<li>
+					<a href="https://www.zhihu.com/people/xiao-pang-zi-14-4/posts" title="zhihu" target="_self">
+					<i class="fa fa-zhihu"></i>
+					</a>
+				</li>
+			
+		
+			
+				
+				<li>
+					<a href="https://github.com/xiaopangzai" title="github" target="_self">
+					<i class="fa fa-github"></i>
+					</a>
+				</li>
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+	</ul>
+</div>
+    <div class="copyright">
+        <span>
+            
+            
+            
+                © 笑胖仔 2019
+            
+        </span>
+    </div>
+    <div class="power">
+        <span>
+            <!--Powered by <a href="https://hexo.io">Hexo</a> & <a href="https://github.com/CaiChenghan/iLiKE">iLiKE Theme</a>-->
+        </span>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <!--page counter part-->
+<script>
+function addCount (Counter) {
+    url=$('.article-date').attr('href').trim();
+    title = $('.article-title').text().trim();
+    var query = new AV.Query(Counter);
+    //use url as unique idnetfication
+    query.equalTo("url",url);
+    query.find({
+        success: function(results) {
+            if (results.length>0) {
+                var counter=results[0];
+                counter.fetchWhenSave(true); //get recent result
+                counter.increment("time");
+                counter.save();
+            } else {
+                var newcounter=new Counter();
+                newcounter.set("title",title);
+                newcounter.set("url",url);
+                newcounter.set("time",1);
+                newcounter.save(null,{
+                    success: function(newcounter) {
+                        //alert('New object created');
+                    }, error: function(newcounter,error) {
+                        alert('Failed to create');
+                    }
+                })
+            }
+        },
+        error: function(error) {
+            //find null is not a error
+            alert('Error:'+error.code+" "+error.message);
+        }
+    });
+}
+$(function() {
+    var Counter=AV.Object.extend("Counter");
+    //only increse visit counting when intering a page
+    if ($('.article-title').length == 1) {
+       addCount(Counter);
+    }
+    var query=new AV.Query(Counter);
+    query.descending("time");
+    // the sum of popular posts
+    query.limit(10); 
+    query.find({
+        success: function(results) {
+                for(var i=0;i<results.length;i++) {
+                    var counter=results[i];
+                    title=counter.get("title");
+                    url=counter.get("url");
+                    time=counter.get("time");
+                    // add to the popularlist widget
+                    showcontent=title+" ("+time+")";
+                    //notice the "" in href
+                    $('.popularlist').append('<li><a href="'+url+'">'+showcontent+'</a></li>');
+                }
+            },
+        error: function(error) {
+            alert("Error:"+error.code+" "+error.message);
+        }
+    });
+});
+</script>
+</div>
+    </div>
+</body>
+</html>
