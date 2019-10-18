@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  
+  <title>Mac_如何利用Hexo发布、迁移博文？ [ 笑胖仔的博客 ]</title>
+  
+    <!-- stylesheets list from config.yml -->
+    
+      <link rel="stylesheet" href="/css/iLiKE.css">
+    
+  
+  
+  
+  <script src="//cdn1.lncld.net/static/js/3.1.1/av-min.js"></script>
+    <script id="leancloud">
+      AV.init({
+          appId: "6E5zTbTljdUbVW2WkXPsXGJk-gzGzoHsz",
+          appKey: "0vsyDKfNpeSECAI70J794ugv"
+      });
+    </script>
+
+</head></html>
+<body>
+    <div class="header">
+        <div class="container">
+    <div class="menu">
+      <div class="menu-left">
+        <a href="/">
+          <img src="/favicon.ico"></img>
+        </a>
+      </div>
+      <div class="menu-right">
+        
+          
+          
+          
+          
+          
+          
+          <a href="/">首页</a>
+        
+          
+          
+          
+          
+          
+          
+          <a href="/Archives">归档</a>
+        
+      </div>
+    </div>
+</div>
+    </div>
+    <div class="container">
+        <h1 class="post-title">Mac_如何利用Hexo发布、迁移博文？</h1>
+<article class="post markdown-style">
+  <blockquote>
+<p>承上篇文章，问题就来了，别的平台发过的博客怎么放到自己的博客上呢？<br>上篇文章中第三部分讲了“如何利用Hexo搭建博客”，里面讲了怎么创建博客，可移步查看如何创建发布新的博文：<a href="https://blog.csdn.net/pang787559613/article/details/102606529" target="_blank" rel="noopener">GitHub Pages +<br>Hexo免费搭建个人博客_Mac</a>：<a href="https://blog.csdn.net/pang787559613/article/details/102606529" target="_blank" rel="noopener">https://blog.csdn.net/pang787559613/article/details/102606529</a>，那么这篇就讲一下怎么迁移博文到个人博客上。</p>
+</blockquote>
+<h1 id="迁移博文："><a href="#迁移博文：" class="headerlink" title="迁移博文："></a>迁移博文：</h1><p><strong>1、导出Markdown格式的文件：</strong></p>
+<p>比如我：</p>
+<p>在csdn上发过博客，那么找到我之前的文章，选择导出Markdown文件，则可以在下载文件夹下看到一个后缀为.md的文件，就是那篇博文了：</p>
+<p><img src="https://img-blog.csdnimg.cn/20191018100021612.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Bhbmc3ODc1NTk2MTM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20191018100032519.png" alt="在这里插入图片描述"></p>
+<p><strong>2、把这个文件放至hexo博客里的_posts文件夹下，这个是上篇文章搭建hexo博客之后，发现创建的文章都在这里，我的目录为<code>/Users/zhushuzhen/Desktop/blog/source/_posts</code>，我用webstorm打开可以清晰看到目录，当然也可用其它开发工具打开查看：</strong></p>
+<p><img src="https://img-blog.csdnimg.cn/20191018101217791.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Bhbmc3ODc1NTk2MTM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20191018101227145.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Bhbmc3ODc1NTk2MTM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>3、发布文章：</strong></p>
+<p>可以直接在webstorm里面的命令行或者外部命令行进行如下操作：</p>
+<p>前提都是进到该博客项目根目录下：<code>/Users/zhushuzhen/Desktop/blog</code></p>
+<p><img src="https://img-blog.csdnimg.cn/20191018101502674.png" alt="在这里插入图片描述"></p>
+<p>依次输入如下命令：</p>
+<p>清理：<code>hexo clean</code><br>生成：<code>hexo g</code><br>启动：<code>hexo s</code></p>
+<p><img src="https://img-blog.csdnimg.cn/20191018101744863.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Bhbmc3ODc1NTk2MTM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20191018101755718.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Bhbmc3ODc1NTk2MTM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>打开：<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> 预览：<br><img src="https://img-blog.csdnimg.cn/20191018102220805.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Bhbmc3ODc1NTk2MTM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>4、发现我漏了一步，刚刚新发的文章没有标题，那么接下来打开相应的md文章，在最顶部添加一下标题：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: GitHub Pages + Hexo免费搭建个人博客_Mac</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/20191018102439489.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Bhbmc3ODc1NTk2MTM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20191018102448713.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Bhbmc3ODc1NTk2MTM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>5、重复步骤3，发布下文章：</strong></p>
+<p>ctrl+c</p>
+<p>依次输入如下命令：</p>
+<p>清理：<code>hexo clean</code><br>生成：<code>hexo g</code><br>启动：<code>hexo s</code></p>
+<p>有标题了：<br><img src="https://img-blog.csdnimg.cn/20191018104844822.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Bhbmc3ODc1NTk2MTM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>6、推至远端：</strong></p>
+<p>ctrl+c</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/20191018105039764.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Bhbmc3ODc1NTk2MTM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>刷新<a href="https://xiaopangzai.github.io" target="_blank" rel="noopener">https://xiaopangzai.github.io</a>可查看到，已经同步上去了：<br><img src="https://img-blog.csdnimg.cn/20191018105141583.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Bhbmc3ODc1NTk2MTM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20191018105156127.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Bhbmc3ODc1NTk2MTM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+
+</article>
+
+    <div class="pagenator post-pagenator">
+    
+    
+
+    
+    <p>上次更新 2019-10-18</p>
+    
+    
+        <a class="extend next post-next" href="/2019/10/18/GitHub Pages + Hexo免费搭建个人博客_Mac/">下一篇</a>
+    
+    </div>
+
+    </div>
+    <div class="footer">
+        <div class="container">
+    <div class="social">
+	<ul class="social-list">
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+				
+				<li>
+					<a href="https://blog.csdn.net/pang787559613" title="csdn" target="_self">
+					<i class="fa fa-csdn"></i>
+					</a>
+				</li>
+			
+		
+			
+				
+				<li>
+					<a href="https://www.jianshu.com/u/1eb3400994f7" title="jianshu" target="_self">
+					<i class="fa fa-jianshu"></i>
+					</a>
+				</li>
+			
+		
+			
+				
+				<li>
+					<a href="https://www.zhihu.com/people/xiao-pang-zi-14-4/posts" title="zhihu" target="_self">
+					<i class="fa fa-zhihu"></i>
+					</a>
+				</li>
+			
+		
+			
+				
+				<li>
+					<a href="https://github.com/xiaopangzai" title="github" target="_self">
+					<i class="fa fa-github"></i>
+					</a>
+				</li>
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+	</ul>
+</div>
+    <div class="copyright">
+        <span>
+            
+            
+            
+                © 笑胖仔 2019
+            
+        </span>
+    </div>
+    <div class="power">
+        <span>
+            <!--Powered by <a href="https://hexo.io">Hexo</a> & <a href="https://github.com/CaiChenghan/iLiKE">iLiKE Theme</a>-->
+        </span>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <!--page counter part-->
+<script>
+function addCount (Counter) {
+    url=$('.article-date').attr('href').trim();
+    title = $('.article-title').text().trim();
+    var query = new AV.Query(Counter);
+    //use url as unique idnetfication
+    query.equalTo("url",url);
+    query.find({
+        success: function(results) {
+            if (results.length>0) {
+                var counter=results[0];
+                counter.fetchWhenSave(true); //get recent result
+                counter.increment("time");
+                counter.save();
+            } else {
+                var newcounter=new Counter();
+                newcounter.set("title",title);
+                newcounter.set("url",url);
+                newcounter.set("time",1);
+                newcounter.save(null,{
+                    success: function(newcounter) {
+                        //alert('New object created');
+                    }, error: function(newcounter,error) {
+                        alert('Failed to create');
+                    }
+                })
+            }
+        },
+        error: function(error) {
+            //find null is not a error
+            alert('Error:'+error.code+" "+error.message);
+        }
+    });
+}
+$(function() {
+    var Counter=AV.Object.extend("Counter");
+    //only increse visit counting when intering a page
+    if ($('.article-title').length == 1) {
+       addCount(Counter);
+    }
+    var query=new AV.Query(Counter);
+    query.descending("time");
+    // the sum of popular posts
+    query.limit(10); 
+    query.find({
+        success: function(results) {
+                for(var i=0;i<results.length;i++) {
+                    var counter=results[i];
+                    title=counter.get("title");
+                    url=counter.get("url");
+                    time=counter.get("time");
+                    // add to the popularlist widget
+                    showcontent=title+" ("+time+")";
+                    //notice the "" in href
+                    $('.popularlist').append('<li><a href="'+url+'">'+showcontent+'</a></li>');
+                }
+            },
+        error: function(error) {
+            alert("Error:"+error.code+" "+error.message);
+        }
+    });
+});
+</script>
+</div>
+    </div>
+</body>
+</html>
